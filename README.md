@@ -22,3 +22,18 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# DB設計
+
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|email|string|null: false, unique: true|
+|password|string|null: false|
+|image|text|--------|
+|profile|text|------|
+
+### Association
+- has many :posts
+- 
