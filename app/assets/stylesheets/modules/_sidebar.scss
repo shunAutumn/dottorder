@@ -1,0 +1,45 @@
+#posts-index, #posts-new {
+  * {
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+  }
+
+  .sidebar {
+    border-right: 1px double #333;
+    width: 20%;
+    height: 100%;
+    background-color: #a2a2a2;
+    text-align: center;
+    &__logo {
+      a {
+        font-size: 30px;
+        text-decoration: none;
+        color: #fff;
+        text-align: center;
+        img {
+          width: 60px;
+        }
+      }
+      font-size: 30px;
+      color: #333;
+      margin: 20px;
+    }
+    ul {
+      margin: 10px;
+      li {
+        margin: 10px;
+        font-size: 20px;
+        
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
