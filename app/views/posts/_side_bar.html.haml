@@ -1,0 +1,23 @@
+.sidebar
+  .sidebar__logo 
+    %a(href="/")
+      =image_tag('logo/logo.png')
+      Order
+  %ul
+    %li.sidebar__button--home 
+      =link_to "HOME"
+    %li.sidebar__button--favorite 
+      =link_to "FAVORITE"
+    %li.sidebar__button--profile 
+      =link_to "PROFILE"
+    %li.sidebar__button--make-order 
+      =link_to "順序を作る", new_post_path
+    %li.sidebar__button--login 
+      - if user_signed_in?
+        %li.header__bottom--signout  
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+      - else
+        %li.header__bottom--sighin
+          = link_to "ログイン", new_user_session_path
+        %li.header__bottom--signup
+          = link_to "新規会員登録", new_user_registration_path
