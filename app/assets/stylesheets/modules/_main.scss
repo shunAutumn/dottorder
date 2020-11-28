@@ -1,0 +1,99 @@
+#posts-index {
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+    .container {
+        .header {
+          height: 35px;
+          &__title {
+            font-size: 20px;
+            font-weight: bold;
+            padding-left: 10px;
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      .posts__container {
+        margin-bottom: 3px;
+        display: flex;
+        width: 100%;
+        height: 150px;
+        background-color: #f3f3f3;
+        border-style: solid double groove ridge;
+        &--length {
+
+        }
+        &--index {
+          width: 100%;
+          display:flex;
+          margin: 10px 20px;
+          .posts__container--side {
+            display: flex;
+            &--icon {
+              width: 49px;
+            }
+          }
+          .posts__container--main {
+            width: 100%;
+            justify-content: space-between;
+            margin-left: 10px;
+            position: relative;
+            &--upper {
+              display: flex;
+              &--username {
+                font-size: 16px;
+                font-weight: bold;
+              }
+              &--dateandtime {
+                position: absolute;
+                right: 0;
+              }
+            }
+            .posts__container--middle {
+              margin: 7px 0;
+              &--title {
+                // border-bottom: 1px solid #333;
+              }
+              &--border {
+                border: 1px solid #ccc;
+                width: 300px;
+              }
+              &--discription {
+                margin-top: 5px;
+              }
+            }
+
+            .posts__container--buttons {
+              display: flex;
+              justify-content: flex-end;
+              position: absolute;
+              bottom: 0;
+              right: 20px;
+
+              &--comment {
+                margin-right: 50px;
+                a {
+                  color: #333;
+                }
+              }
+              &--favorite {
+                a {
+                  color: #333;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
