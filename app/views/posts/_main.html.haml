@@ -1,0 +1,43 @@
+.main
+  .container
+    .header
+      .header__title
+        = link_to root_path do
+          ホーム
+
+
+    - @posts.each do |post|
+      %ul
+        %li
+          = link_to post_path(post.id) do
+            .posts__container
+              .posts__container--length
+                3
+              .posts__container--index
+                .posts__container--side
+                  .posts__container--side--icon
+                    -# - if post.user.image.attached?
+                    -#   = image_tag post.user.image
+                    -# - else
+                    -# = link_to image_tag("icon/usericon.png"), mypage_path
+                    = image_tag "icon/usericon.png"
+                .posts__container--main
+                  .posts__container--main--upper
+                    .posts__container--main--upper--username
+                      -# = link_to post.user.name, mypage_path
+                      = post.user.name
+                    .posts__container--main--upper--dateandtime
+                      = post.created_at.strftime("%Y-%m-%d")
+                  .posts__container--middle    
+                    .posts__container--middle--title
+                      = post.toptitle
+                    .posts__container--middle--border
+                    .posts__container--middle--discription
+                      = post.topdescription
+                  .posts__container--buttons
+                    .posts__container--buttons--comment
+                      = link_to "#" do
+                        %i.fas.fa-comment
+                    .posts__container--buttons--favorite
+                      = link_to "#" do
+                        %i.fas.fa-heart
