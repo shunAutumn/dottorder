@@ -1,0 +1,44 @@
+.wrapper
+  = render 'side_bar'
+
+  .form__page
+    .form__page--header
+      .form__page--header--title
+        MAKE ORDER
+  
+    .form____page__content
+      .form__page__content__form
+        = form_for(@post) do |f|
+          .FormField
+            .FormField__label
+              .FormField__label__title
+                .FormField__label__title__name タイトル
+                .FormField__label__title--must 必須
+
+            .form__outer--head
+              .form__inner--head--title
+                = f.text_field :toptitle, placeholder: "タイトル"
+              .form__inner--head--description
+                = f.text_area :topdescription, placeholder: "説明"
+          .Underline
+          .FormField
+            .FormField__label
+              .FormField__label__title
+                .FormField__label__title__name 順序1
+                .FormField__label__title--must 必須
+            .form__inner--main--title
+              = f.text_field :title
+            .form__inner--main--description
+              = f.text_area :description
+
+          = f.submit "投稿する"
+        
+-# .form__outer--tag
+-#   .form__inner--select
+
+-# .form__outer--main
+-#   .form__inner--main--title
+-#     %textfield
+-#   .form__inner--main--description
+-#     %textarea
+  
